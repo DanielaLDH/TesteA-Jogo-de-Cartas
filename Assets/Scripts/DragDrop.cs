@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     private Canvas canvas;
-
     private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
     private Transform originalParent;
-
 
     private void Awake()
     {
@@ -45,13 +43,5 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         {
             rectTransform.SetParent(originalParent, true);
         }
-
     }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        
-    }
-
-   
 }

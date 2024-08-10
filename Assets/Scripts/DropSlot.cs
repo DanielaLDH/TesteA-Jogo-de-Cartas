@@ -23,8 +23,6 @@ public class DropSlot : MonoBehaviour, IDropHandler
                     droppedCardRect.SetParent(transform);
                     droppedCardRect.localScale = Vector3.one;
                     droppedCardRect.localPosition = Vector2.zero;
-
-
                 }
                 else
                 {

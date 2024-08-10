@@ -4,18 +4,9 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
+    [Tooltip("The power level of the card, determining its strength in the game.")]
     public int cardPower;
+
+    [Tooltip("The name of the card.")]
     [SerializeField] string cardName;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

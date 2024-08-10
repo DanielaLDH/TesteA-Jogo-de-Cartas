@@ -5,8 +5,13 @@ using UnityEngine.EventSystems;
 
 public class CardDeck : MonoBehaviour, IPointerClickHandler
 {
+    [Tooltip("List of all card prefabs that can be used in the deck.")]
     [SerializeField] List<GameObject> cards;
+
+    [Tooltip("The parent transform where the cards in hand will be instantiated.")]
     [SerializeField] Transform cardHand;
+
+    [Tooltip("The maximum number of cards that can be held in hand.")]
     [SerializeField] int maxQtdCards;
 
     // Start is called before the first frame update
@@ -36,7 +41,7 @@ public class CardDeck : MonoBehaviour, IPointerClickHandler
     {
         int cardQtd = cardHand.childCount;
 
-        if (cardQtd < maxQtdCards && cards.Count >0)
+        if (cardQtd < maxQtdCards)
         {
             InstantiateCards();
         }
@@ -44,12 +49,6 @@ public class CardDeck : MonoBehaviour, IPointerClickHandler
 
     void InstantiateCards()
     {
-        if (cards.Count == 0)
-        {
-            Debug.Log("No more cards available");
-            return;
-        }
-
         int randonCard = Random.Range(0, cards.Count);
 
         GameObject newCard = Instantiate(cards[randonCard], cardHand);
