@@ -26,5 +26,5 @@ This is a simple prototype of a card game created using Unity. The project was d
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/DanielaLDH/Teste-A---Jogo-de-Cartas.git
+   git clone https://github.com/DanielaLDH/TesteA-Jogo-de-Cartas.git
    ```
